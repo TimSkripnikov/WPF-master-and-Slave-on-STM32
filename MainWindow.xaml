@@ -1,0 +1,32 @@
+﻿<Window x:Class="Master2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Master2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ComboBox x:Name="SelectorComPort" HorizontalAlignment="Left" Height="20" Margin="78,62,0,0" VerticalAlignment="Top" Width="168" SelectionChanged="SelectorComPort_SelectionChanged"/>
+        <Label Content="Select Com-port" HorizontalAlignment="Left" Margin="78,32,0,0" VerticalAlignment="Top" Width="168" Height="30"/>
+        <ComboBox x:Name="SelectorLED" HorizontalAlignment="Left" Height="20" Margin="78,150,0,0" VerticalAlignment="Top" Width="259" SelectionChanged="SelectorLED_SelectionChanged"/>
+        <Label Content="Select Led" HorizontalAlignment="Left" Height="30" Margin="78,120,0,0" VerticalAlignment="Top" Width="168"/>
+        <Button Content="Update state" x:Name="UpdateState" HorizontalAlignment="Left" Height="22" Margin="533,195,0,0" VerticalAlignment="Top" Width="106" Click="UpdateState_Click"/>
+        <Button x:Name="TurnOnLED" Click="TurnOnLED_Click" Content="Turn on LED" HorizontalAlignment="Left" Height="22" Margin="78,195,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="TurOffLED" Click="TurnOffLED_Click" Content="Turn off LED" HorizontalAlignment="Left" Height="22" Margin="231,195,0,0" VerticalAlignment="Top" Width="106"/>
+        <Ellipse x:Name="LED1" HorizontalAlignment="Left" Height="38" Margin="458,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="LED2" HorizontalAlignment="Left" Height="38" Margin="526,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="LED3" HorizontalAlignment="Left" Height="38" Margin="600,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Ellipse x:Name="LED4" HorizontalAlignment="Left" Height="38" Margin="668,120,0,0" Stroke="Black" VerticalAlignment="Top" Width="38"/>
+        <Label Content="LED 1" HorizontalAlignment="Left" Height="24" Margin="458,163,0,0" VerticalAlignment="Top" Width="38"/>
+        <Label Content="LED 2" HorizontalAlignment="Left" Height="24" Margin="526,163,0,0" VerticalAlignment="Top" Width="53"/>
+        <Label Content="LED 3" HorizontalAlignment="Left" Height="24" Margin="600,163,0,0" VerticalAlignment="Top" Width="39"/>
+        <Label Content="LED 4" HorizontalAlignment="Left" Height="24" Margin="668,163,0,0" VerticalAlignment="Top" Width="41"/>
+        <TextBox x:Name="Request" HorizontalAlignment="Left" Height="25" Margin="162,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" IsEnabled="True"/>
+        <Button x:Name="Send" Content="Send Request" HorizontalAlignment="Left" Height="20" Margin="78,319,0,0" VerticalAlignment="Top" Width="140" Click="Send_Click"/>
+        <TextBox x:Name="Response" HorizontalAlignment="Left" Height="25" Margin="162,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="564" IsEnabled="False"/>
+        <Label Content="Request" HorizontalAlignment="Left" Margin="78,277,0,0" VerticalAlignment="Top" Width="53" Height="30"/>
+        <Label Content="Response" HorizontalAlignment="Left" Margin="78,353,0,0" VerticalAlignment="Top" Width="63" Height="30"/>
+
+    </Grid>
+</Window>
