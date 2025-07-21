@@ -27,3 +27,8 @@
 1	319	7748084630043620	D:/Documents/work/stm/Testing/EWARM/Testing/Obj/src_5429682818773648819.dir/MyModbusRtu.o	6d305f01c5a2f4e0
 319	370	7748084630497390	D:/Documents/work/stm/Testing/EWARM/Testing/Exe/Testing.out	c8fc93e1f351a0a9
 372	379	7748084630653656	D:/Documents/work/stm/Testing/EWARM/Testing/Exe/Testing.hex	a98172dc0c7f7c27
+6	273	7748096176410400	D:/Documents/work/stm/Testing/EWARM/Testing/Obj/src_5429682818773648819.dir/stm32f0xx_it.o	3bf8c0a689dc5ba
+9	305	7748096176735149	D:/Documents/work/stm/Testing/EWARM/Testing/Obj/src_5429682818773648819.dir/main.o	8e733ae1b851878a
+1	424	7748096178027299	D:/Documents/work/stm/Testing/EWARM/Testing/Obj/src_5429682818773648819.dir/MyModbusRtu.o	6d305f01c5a2f4e0
+426	479	7748096178711562	D:/Documents/work/stm/Testing/EWARM/Testing/Exe/Testing.out	c8fc93e1f351a0a9
+481	492	7748096178907712	D:/Documents/work/stm/Testing/EWARM/Testing/Exe/Testing.hex	a98172dc0c7f7c27
