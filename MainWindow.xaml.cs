@@ -219,7 +219,58 @@ namespace Master2
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
+            if (selected_port == null)
+            {
+                MessageBox.Show("COM-port was not selected.");
+                return;
+            }
             
+
+            byte[] bytes = HexStringToBytes(Request.Text);
+
+            ModbusState state = new ModbusState
+            {
+                SelectedPortName = selected_port,
+                SlaveAddress = bytes[0]
+            };
+
+            bytes = ModbusProtocol.AppendCRC(bytes);
+
+            ModbusProtocol.SendAndReceive(state, bytes);
+
+            if (state.IsError || state.LastResponse == null)
+            {
+                MessageBox.Show("Error: " + (state.ErrorCode ?? "no answer came"));
+                return;
+            }
+
+            string response = BitConverter.ToString(state.LastResponse).Replace("-", "");
+
+            Response.Text = response;
+
+        }
+
+        private byte[] HexStringToBytes(string hex)
+        {
+            hex = hex.Replace(" ", "").ToUpper();
+
+            if (hex.Length % 2 != 0)
+            {
+                hex = "0" + hex;
+            }
+
+            int byteCount = hex.Length / 2;
+            byte[] result = new byte[byteCount];
+
+            string byteValue;
+
+            for (int i = 0; i < byteCount; i++)
+            {
+                byteValue = hex.Substring(i * 2, 2);
+                result[i] = Convert.ToByte(byteValue, 16);
+            }
+
+            return result;
         }
 
     }
