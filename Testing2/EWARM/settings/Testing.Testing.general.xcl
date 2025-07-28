@@ -1,0 +1,15 @@
+C:\iar\ewarm-9.60.3\arm\bin\armPROC.dll
+
+ C:\iar\ewarm-9.60.3\arm\bin\armSTLINK.dll
+
+ C:\Users\artem\source\repos\Master2\Testing2\EWARM\Testing\Exe\Testing.out
+
+ --plugin=C:\iar\ewarm-9.60.3\arm\bin\armLibSupportUniversal.dll
+
+ --device_macro=C:\iar\ewarm-9.60.3\arm/config/debugger/ST/STM32F0xx.dmac
+
+ --flash_loader=C:\iar\ewarm-9.60.3\arm/config/flashloader/ST/FlashSTM32F07xxB.board
+
+ 
+
+
