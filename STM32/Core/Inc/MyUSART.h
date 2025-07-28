@@ -121,8 +121,6 @@ struct MyUSART {
   uint8_t tx_length;
   
   uint8_t IsRead;
-  
-  uint16_t registers[16];
 };
 
 // ------------------ Functions ------------------------------------------------------------

@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.general.xcl" --backend -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.driver.xcl" 
+"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\STM32\EWARM\settings\Testing.Testing.general.xcl" --backend -f "C:\Users\artem\source\repos\Master2\STM32\EWARM\settings\Testing.Testing.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.driver.xcl" 
+"C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\STM32\EWARM\settings\Testing.Testing.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\artem\source\repos\Master2\STM32\EWARM\settings\Testing.Testing.driver.xcl" 
 
 @echo off 
 :end

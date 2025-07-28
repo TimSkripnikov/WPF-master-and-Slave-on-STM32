@@ -7,7 +7,7 @@ extern struct MyUSART my_usart;
 
 void InitMyModbusRtu()
 {
-                                                                // write 35 in RTOR
+                                                                
   modbus.device_address = 0x01;
   
   modbus.role = Slave;

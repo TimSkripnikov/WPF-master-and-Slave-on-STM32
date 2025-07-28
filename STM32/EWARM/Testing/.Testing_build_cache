@@ -8,5 +8,11 @@
                 <Path>D:\Documents\work\stm\Testing\EWARM\Testing\List\Testing.map</Path>
             </Output>
         </Parent>
+        <Parent>
+            <Path>C:\Users\artem\source\repos\Master2\STM32\EWARM\Testing\Exe\Testing.out</Path>
+            <Output>
+                <Path>C:\Users\artem\source\repos\Master2\STM32\EWARM\Testing\List\Testing.map</Path>
+            </Output>
+        </Parent>
     </Tool>
 </BuildDb>
