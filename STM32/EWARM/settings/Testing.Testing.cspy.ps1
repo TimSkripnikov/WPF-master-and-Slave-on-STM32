@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing\EWARM\settings\Testing.Testing.general.xcl" --backend -f "C:\Users\artem\source\repos\Master2\Testing\EWARM\settings\Testing.Testing.driver.xcl" 
+& "C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.general.xcl" --backend -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.driver.xcl" 
 }
 else
 {
-& "C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing\EWARM\settings\Testing.Testing.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\artem\source\repos\Master2\Testing\EWARM\settings\Testing.Testing.driver.xcl" 
+& "C:\iar\ewarm-9.60.3\common\bin\cspybat" -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\artem\source\repos\Master2\Testing2\EWARM\settings\Testing.Testing.driver.xcl" 
 }

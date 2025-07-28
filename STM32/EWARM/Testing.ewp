@@ -1132,6 +1132,9 @@
                     <name>$PROJ_DIR$\..\Core\Inc\main.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\MyGPIO.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Inc\MyModbusRtu.h</name>
                 </file>
                 <file>

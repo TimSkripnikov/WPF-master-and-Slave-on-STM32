@@ -3,12 +3,6 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>C:\Users\artem\source\repos\Master2\Testing\EWARM\Testing\Exe\Testing.out</Path>
-            <Output>
-                <Path>C:\Users\artem\source\repos\Master2\Testing\EWARM\Testing\List\Testing.map</Path>
-            </Output>
-        </Parent>
-        <Parent>
             <Path>D:\Documents\work\stm\Testing\EWARM\Testing\Exe\Testing.out</Path>
             <Output>
                 <Path>D:\Documents\work\stm\Testing\EWARM\Testing\List\Testing.map</Path>
