@@ -31,7 +31,7 @@
 /* USER CODE BEGIN TD */
 //extern volatile uint32_t sys_tick_ms;
 
-extern StateLEDS state_leds;
+extern StateButtons state_button;
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/
@@ -163,14 +163,14 @@ void EXTI4_15_IRQHandler(void)
   if (EXTI->PR & (1 << 7))
   {
     EXTI->PR = (1 << 7);
-    state_leds.led1 ^= 1; 
+    state_button.button1 ^= 1; 
     
   }
      
   if (EXTI->PR & (1 << 6))
   {
     EXTI->PR = (1 << 6);
-    state_leds.led2 ^= 1; 
+    state_button.button2 ^= 1; 
     
   }
         

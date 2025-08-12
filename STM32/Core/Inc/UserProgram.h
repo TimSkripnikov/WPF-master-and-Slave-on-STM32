@@ -14,12 +14,10 @@ typedef struct
 
 typedef struct 
 {
-  uint8_t led1;
-  uint8_t led2;
-  uint8_t led3;
-  uint8_t led4;
-  uint8_t led5;
-} StateLEDS;
+  uint8_t button1;
+  uint8_t button2;
+
+} StateButtons;
 
 void CheckingLEDS(void);
 

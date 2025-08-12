@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildDb>
+    <Tool>
+        <Name>linker</Name>
+        <Parent>
+            <Path>D:\Documents\work\stm\Display\EWARM\Display\Exe\Display.out</Path>
+            <Output>
+                <Path>D:\Documents\work\stm\Display\EWARM\Display\List\Display.map</Path>
+            </Output>
+        </Parent>
+    </Tool>
+</BuildDb>

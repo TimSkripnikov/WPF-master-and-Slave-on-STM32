@@ -3,7 +3,7 @@
 #include "MyModbusRtu.h"
 #include "MyGPIO.h"
 
-StateLEDS state_leds;
+StateButtons state_button;
 
 ProgramState program_state;
 
@@ -37,23 +37,19 @@ CLEAR_BIT(GPIOA->OTYPER, GPIO_OTYPER_MASK(GPIO_Px5_POSITION));
 
 SET_BIT(GPIOA_ODR, (1 << GPIO_Px5_POSITION));
 
-memset(&state_leds, 0, sizeof(state_leds));
+memset(&state_button, 0, sizeof(state_button));
  
 }
 
 void CheckingLEDS()
 {
-    if (state_leds.led1)
-        GPIOC->ODR |=  (1 << 13);  
-    else
-        GPIOC->ODR &= ~(1 << 13);  
+    if (state_button.button1)
+        GPIOC->ODR ^=  (1 << 13);  
 
-    if (state_leds.led2)
-        GPIOC->ODR |=  (1 << 14);
-    else
-        GPIOC->ODR &= ~(1 << 14);
+    if (state_button.button2)
+        GPIOC->ODR ^=  (1 << 14);
     
-    UpdateRegisters();
+    UpdateRegisters(); 
 }
 
 void UpdateRegisters()
