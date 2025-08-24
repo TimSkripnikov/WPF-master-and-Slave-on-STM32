@@ -1476,9 +1476,30 @@
             <name>User</name>
             <group>
                 <name>Core</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\dma.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\i2c.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32f0xx_hal_msp.c</name>
+                </file>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Src\stm32f0xx_it.c</name>
+                </file>
             </group>
             <group>
                 <name>inc</name>
+                <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\fonts.h</name>
+                </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Inc\gpio.h</name>
                 </file>
@@ -1492,6 +1513,9 @@
                     <name>$PROJ_DIR$\..\Core\Inc\MyModbusRtu.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\MySH1106.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Inc\MyUSART.h</name>
                 </file>
                 <file>
@@ -1501,28 +1525,28 @@
                     <name>$PROJ_DIR$\..\Core\Inc\stm32f0xx_it.h</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Inc\tree.h</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Inc\UserProgram.h</name>
                 </file>
             </group>
             <group>
                 <name>src</name>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\gpio.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\main.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\fonts.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\MyModbusRtu.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\MySH1106.c</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\MyUSART.c</name>
                 </file>
                 <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32f0xx_hal_msp.c</name>
-                </file>
-                <file>
-                    <name>$PROJ_DIR$\..\Core\Src\stm32f0xx_it.c</name>
+                    <name>$PROJ_DIR$\..\Core\Src\tree.c</name>
                 </file>
                 <file>
                     <name>$PROJ_DIR$\..\Core\Src\UserProgram.c</name>

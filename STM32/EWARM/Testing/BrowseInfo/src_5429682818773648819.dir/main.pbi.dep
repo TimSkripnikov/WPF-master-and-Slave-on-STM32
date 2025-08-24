@@ -1,5 +1,4 @@
 C:\Users\artem\source\repos\Master2\STM32\EWARM\Testing\BrowseInfo\src_5429682818773648819.dir\main.pbi: \
-  C:\Users\artem\source\repos\Master2\STM32\Core\Src\main.c \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\main.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\stm32f0xx_hal_conf.h \
@@ -36,11 +35,10 @@ C:\Users\artem\source\repos\Master2\STM32\EWARM\Testing\BrowseInfo\src_542968281
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_pwr.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Drivers\STM32F0xx_HAL_Driver\Inc\stm32f0xx_hal_pwr_ex.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\gpio.h \
-  C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\main.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\MyModbusRtu.h \
   C:\iar\ewarm-9.60.3\arm\inc\c\string.h \
   C:\iar\ewarm-9.60.3\arm\inc\c\DLib_Product_string.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\MyGPIO.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\MyUSART.h \
   C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\UserProgram.h \
-  C:\Users\artem\source\repos\Master2\STM32\EWARM\..\Core\Inc\MyModbusRtu.h
+  C:\Users\artem\source\repos\Master2\STM32\Core\Src\main.c

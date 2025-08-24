@@ -8,7 +8,7 @@ extern struct MyUSART my_usart;
 void InitMyModbusRtu()
 {
                                                                 
-  modbus.device_address = 0x01;
+  modbus.device_address = 0x00;
   
   modbus.role = Slave;
   
@@ -139,6 +139,11 @@ uint8_t SerializeRequest(Request *request, uint8_t *buffer)
     return 0; 
 }
 
+void UpdateSlaveAddress(uint8_t address)
+{
+  modbus.device_address = address;
+}
+  
 
 
 

@@ -18,9 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
+#include "i2c.h"
 #include "gpio.h"
-
-
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -28,6 +28,7 @@
 #include "MyGPIO.h"
 #include "MyUSART.h"
 #include "UserProgram.h"
+#include "MySH1106.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -54,7 +55,6 @@ int flag = 0;
 
 extern int flag;
 
-//uint8_t test_data[6] = {0x11, 0x03, 0x00, 0x00, 0x00, 0x01}; // 
 
 /* USER CODE END PV */
 
@@ -98,6 +98,8 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_I2C2_Init();
   /* USER CODE BEGIN 2 */
   
   //----------------------------------------------------------------------------
@@ -110,17 +112,33 @@ int main(void)
   
   GPIOA->ODR |= (1 << 5);
   
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, GPIO_PIN_RESET);
+  
+  SH1106_Init();
+  
+  current_screen = &Welcome_Screen;
+  
+  current_screen->Render_Screen_on_Frame_Buffer();
+  
+  SH1106_Start_Update();
+  
   /* USER CODE END 2 */
-    
-    
+
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    CheckingLEDS();
-    UserMainLoop();
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
     
+    SH1106_I2C_Update_Frame_loop();
+    
+    Switch_Screens_Loop();
+    
+    UserMainLoop();
   }
+  /* USER CODE END 3 */
 }
 
 /**

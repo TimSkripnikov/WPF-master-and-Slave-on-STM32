@@ -34,7 +34,7 @@ void InitMyUSART()
   CLEAR_BIT(USART1_CR2, USART_CR2_STOP_MASK);                    // 1 stop bit
             
             
-  USART1_BRR = USART_BRR_VALUE_9600;
+  USART1_BRR = USART_BRR_VALUE(BAUDE_RATE_9600);
   
   SET_BIT(USART1_CR1, USART_CR1_UE_MASK);
   SET_BIT(USART1_CR1, USART_CR1_TE_MASK);
@@ -115,7 +115,11 @@ void MyUSART_Handler()
     }
 
 }
- 
+
+void Update_Speed_BRR_Value(int baude_rate)
+{
+  USART1_BRR = USART_BRR_VALUE(baude_rate);
+}
 
 
 

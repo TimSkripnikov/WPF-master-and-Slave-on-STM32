@@ -25,6 +25,8 @@
 #include "MyModbusRtu.h"
 #include "MyUSART.h"
 #include "UserProgram.h"
+
+#include "MySH1106.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,7 +62,8 @@ extern StateButtons state_button;
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-
+extern DMA_HandleTypeDef hdma_i2c2_tx;
+extern I2C_HandleTypeDef hi2c2;
 /* USER CODE BEGIN EV */
 
 /* USER CODE END EV */
@@ -132,8 +135,7 @@ void SysTick_Handler(void)
   /* USER CODE BEGIN SysTick_IRQn 0 */
 
   /* USER CODE END SysTick_IRQn 0 */
- // HAL_IncTick();
-  //sys_tick_ms++;
+  HAL_IncTick();
   /* USER CODE BEGIN SysTick_IRQn 1 */
  // timer++;
   /* USER CODE END SysTick_IRQn 1 */
@@ -154,28 +156,77 @@ void EXTI4_15_IRQHandler(void)
   /* USER CODE BEGIN EXTI4_15_IRQn 0 */
 
   /* USER CODE END EXTI4_15_IRQn 0 */
- // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
-//  HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
- // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
- // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
+  // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_4);
+  // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_5);
+  // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_6);
+  // HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_7);
   /* USER CODE BEGIN EXTI4_15_IRQn 1 */
   
   if (EXTI->PR & (1 << 7))
   {
     EXTI->PR = (1 << 7);
-    state_button.button1 ^= 1; 
+    current_button = BUTTON_DOWN;
     
   }
      
   if (EXTI->PR & (1 << 6))
   {
     EXTI->PR = (1 << 6);
-    state_button.button2 ^= 1; 
+    current_button = BUTTON_UP;
+    
+  }
+  
+  if (EXTI->PR & (1 << 5))
+  {
+    EXTI->PR = (1 << 5);
+    current_button = BUTTON_ENTER;
+    
+  }
+  
+  if (EXTI->PR & (1 << 4))
+  {
+    EXTI->PR = (1 << 4);
+    current_button = BUTTON_EXIT;
     
   }
         
   
   /* USER CODE END EXTI4_15_IRQn 1 */
+}
+
+/**
+  * @brief This function handles DMA1 channel 4, 5, 6 and 7 interrupts.
+  */
+void DMA1_Channel4_5_6_7_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel4_5_6_7_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel4_5_6_7_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_i2c2_tx);
+  /* USER CODE BEGIN DMA1_Channel4_5_6_7_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel4_5_6_7_IRQn 1 */
+}
+
+/**
+  * @brief This function handles I2C2 global interrupt.
+  */
+void I2C2_IRQHandler(void)
+{
+  /* USER CODE BEGIN I2C2_IRQn 0 */
+
+  /* USER CODE END I2C2_IRQn 0 */
+  if (hi2c2.Instance->ISR & (I2C_FLAG_BERR | I2C_FLAG_ARLO | I2C_FLAG_OVR))
+  {
+    HAL_I2C_ER_IRQHandler(&hi2c2);
+  }
+  else
+  {
+    HAL_I2C_EV_IRQHandler(&hi2c2);
+  }
+  /* USER CODE BEGIN I2C2_IRQn 1 */
+
+  /* USER CODE END I2C2_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

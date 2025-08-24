@@ -91,5 +91,7 @@ uint8_t BuildErrorResponse(Response *response, uint8_t device_address, uint8_t f
 // Returns length of serialized request. Use for Master mode
 uint8_t SerializeRequest(Request *request, uint8_t *buffer);
 
+void UpdateSlaveAddress(uint8_t address);
+
 
 #endif // MY_MODBUS_RTU_H

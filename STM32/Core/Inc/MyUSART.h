@@ -67,7 +67,7 @@
 // ------------------ USART Configuration Constants --------------------------------------
 #define F_8MH                           8000000UL
 #define BAUDE_RATE_9600                 9600
-#define USART_BRR_VALUE_9600            (F_8MH / BAUDE_RATE_9600)
+#define USART_BRR_VALUE(BAUDE_RATE)     (F_8MH / BAUDE_RATE)
 
 #define NVIC_ISER0                      (NVIC->ISER[0])
 #define NVIC_USART1                     27
@@ -120,7 +120,7 @@ struct MyUSART {
   
   uint8_t tx_length;
   
-  uint8_t IsRead;
+  uint8_t IsRead;  
 };
 
 // ------------------ Functions ------------------------------------------------------------
@@ -132,5 +132,8 @@ void SendUSART(void);
 
 // Main USART interrupt handler to manage TX/RX 
 void MyUSART_Handler(void);
+
+// Function to update speed during the process (screen); 
+void Update_Speed_BRR_Value(int baude_rate);
 
 #endif
